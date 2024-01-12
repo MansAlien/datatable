@@ -1,36 +1,36 @@
 {% extends "base.html" %}
 
 {% block navbar_content %}
-  <i style="color: yellowgreen;" class="fas fa-user-alt"></i>&nbsp;&nbsp; Employee List
+<i class="fa-solid fa-plane-up"></i>&nbsp;&nbsp; Air Force
 {% endblock navbar_content %}
 
 
 {% block content %}
-  <div class="container">
-    <br><br><br>
+<div class="container">
+  <br><br><br>
 
-    <table class="table table-bordered" id="example" style="text-align: center;">
-        <thead class="table-success">
-            <tr>
-              <th style="text-align: center; width: 10%;">نوع</th>
-              <th style="text-align: center; width: 10%;">مرتب</th>
-              <th style="text-align: center; width: 10%;">مهنة</th>
-              <th style="text-align: center; width: 30%;">إيميل</th>
-              <th style="text-align: center; width: 30%;">إسم</th>
-              <th style="text-align: center; width: 10%;">م</th>
-            </tr>
-        </thead>
-        <!-- Data from the backend -->
-        {% for employee in employees %}
-        <tr>
-          <td> {{ employee.gender }} </td>
-          <td> {{ employee.salary }} </td>
-          <td> {{ employee.occupation }} </td>
-          <td> {{ employee.email }} </td>
-          <td> {{ employee.name }} </td>
-          <td> {{ employee.id }} </td>
-        </tr>
-        {% endfor %}
-    </table>
-  </div>
+  <table class="table table-bordered" id="example" style="text-align: center;">
+    <thead class="table-success">
+      <tr>
+        <th>نوع</th>
+        <th>مرتب</th>
+        <th>مهنة</th>
+        <th>إيميل</th>
+        <th>إسم</th>
+        <th>م</th>
+      </tr>
+    </thead>
+    <!-- Data from the backend -->
+    {% for employee in employees %}
+    <tr>
+      <td> {{ employee.gender }} </td>
+      <td> {{ employee.salary }} </td>
+      <td> {{ employee.occupation }} </td>
+      <td> {{ employee.email }} </td>
+      <td> {{ employee.name }} </td>
+      <td> {{ employee.id }} </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
 {% endblock content %}

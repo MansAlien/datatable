@@ -14,3 +14,12 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 18px;
 }
+
+#example th {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#example td {
+    border: 1px solid black;
+}  

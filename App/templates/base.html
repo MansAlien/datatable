@@ -14,7 +14,8 @@
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
     <!-- Data Tables View -->
-    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap5.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+
     <!-- Style sheet -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <!-- google font -->
@@ -46,24 +47,28 @@
     <script src="{% static 'js/all.min.js' %}"></script>
 
     <!-- Data tables view -->
-    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
-    
-    <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/dataTables.bootstrap5.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.7.0.min.js' %}"></script>
+    <script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'js/dataTables.bootstrap5.min.js' %}"></script>
 
 
     <script>
-        $("#example").DataTable({
-            paging: true,
-            pageLength: 10,
-            lengthChange: true,
-            autoWidth: true,
-            searching: true,
-            bInfo: true,
-            bSort: true,
-            order: [[5, "asc"]]
-        })
+        $(document).ready( function () {
+        $('#example').DataTable(
+            {
+                paging: true,
+                pageLength: 10,
+                lengthChange: true,
+                autoWidth: true,
+                searching: true,
+                bInfo: true,
+                bSort: true,
+                order: [[5, "asc"]]
+            }
+        );
+    } );
     </script>
+
 </body>
 
 </html>
